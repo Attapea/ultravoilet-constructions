@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-hero rounded-lg"></div>
+              <img src="/lovable-uploads/64b2c644-0f1c-4c6e-a706-f220434faeb2.png" alt="Ultraviolet Construction Logo" className="h-8 w-auto" />
               <span className="text-xl font-bold">Ultraviolet Construction</span>
             </div>
             <p className="text-slate-light mb-6">

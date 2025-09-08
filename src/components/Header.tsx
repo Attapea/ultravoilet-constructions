@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone } from "lucide-react";
 
 const Header = () => {
@@ -21,9 +22,25 @@ const Header = () => {
             <Phone className="w-4 h-4" />
             <span>Call Now</span>
           </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="w-5 h-5" />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="w-5 h-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-6 mt-6">
+                <a href="#services" className="text-foreground hover:text-primary transition-colors text-lg">Services</a>
+                <a href="#about" className="text-foreground hover:text-primary transition-colors text-lg">About</a>
+                <a href="#projects" className="text-foreground hover:text-primary transition-colors text-lg">Projects</a>
+                <a href="#contact" className="text-foreground hover:text-primary transition-colors text-lg">Contact</a>
+                <Button variant="construction" size="sm" className="flex items-center space-x-2 mt-4">
+                  <Phone className="w-4 h-4" />
+                  <span>Call Now</span>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
