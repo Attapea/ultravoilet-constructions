@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 224 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 12%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 224 12% 95%;
+    --secondary-foreground: 224 15% 12%;
+
+    --muted: 224 12% 95%;
+    --muted-foreground: 224 8% 46%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 224 12% 89%;
+    --input: 224 12% 89%;
+    --ring: 262 83% 58%;
+
+    /* Construction brand colors */
+    --ultraviolet: 262 83% 58%;
+    --ultraviolet-dark: 262 83% 48%;
+    --ultraviolet-light: 262 83% 68%;
+    --construction-orange: 24 100% 58%;
+    --slate-dark: 224 15% 12%;
+    --slate-medium: 224 8% 46%;
+    --slate-light: 224 12% 89%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ultraviolet)), hsl(var(--ultraviolet-dark)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--ultraviolet)), hsl(var(--construction-orange)));
+
+    /* Shadows */
+    --shadow-ultraviolet: 0 10px 40px -10px hsl(var(--ultraviolet) / 0.3);
+    --shadow-elevation: 0 4px 20px -4px hsl(224 15% 12% / 0.1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 15% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 224 15% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 224 15% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 83% 68%;
+    --primary-foreground: 224 15% 8%;
+
+    --secondary: 224 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 224 15% 15%;
+    --muted-foreground: 224 8% 65%;
+
+    --accent: 262 83% 68%;
+    --accent-foreground: 224 15% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 224 15% 15%;
+    --input: 224 15% 15%;
+    --ring: 262 83% 68%;
+
+    /* Dark mode overrides */
+    --ultraviolet: 262 83% 68%;
+    --ultraviolet-dark: 262 83% 58%;
+    --ultraviolet-light: 262 83% 78%;
+    --shadow-ultraviolet: 0 10px 40px -10px hsl(var(--ultraviolet) / 0.4);
+    --shadow-elevation: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
